@@ -63,12 +63,7 @@ iframe {
   }
 
   .circular .chessboard-link {
-    visibility: hidden;
-    display: none; 
-  }
-
-  .circular .chessboard-link {
-        animation: reveal ease-in-out 0.4s forwards 1.7s;
+        animation: reveal ease-in-out 0.4s forwards 2s;
         flex-direction: column;
         display: flex; 
         padding: 1px 1px;
