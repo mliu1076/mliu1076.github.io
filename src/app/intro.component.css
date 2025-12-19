@@ -1,0 +1,110 @@
+a{
+    color: inherit;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+h2{
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    /* overflow-x:hidden;
+    overflow-y:hidden; */
+    position:fixed;
+    white-space: nowrap;
+    left:0;
+    top:0;
+    z-index:100;
+}
+
+.eachLetter{
+    left:0;
+    top:0;
+    background-color: black;
+    /* text color of the name in intro */
+    color: black;
+    font-size:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    /* width: 100%;
+    white-space: nowrap;
+    overflow: hidden; */
+    animation:
+        reveal 1s forwards 1s;
+}
+
+/* iterates through each letter(in this case there are 6) */
+.name span:nth-child(1){ animation-delay: 0.5s;} 
+.name span:nth-child(2){ animation-delay: 0.5s;} 
+.name span:nth-child(3){ animation-delay: 0.5s;} 
+.name span:nth-child(4){ animation-delay: 1s;} 
+.name span:nth-child(5){ animation-delay: 1s;} 
+.name span:nth-child(6){ animation-delay: 1s;} 
+
+.about-button{
+    /* top:60%;
+    right: 90%; */
+    position: absolute;   /* Positions relative to its closest positioned parent */
+  top: 0;
+  right: 0;
+  padding: 10px;
+    display:block;
+    visibility: hidden;
+    color:white;
+    animation: 1s about-reveal forwards 1.5s;
+}
+
+.about-button:hover{
+    text-decoration: underline;
+    color: gray;
+}
+
+/* .about-button #offscreen{
+    left:-100vw;
+} */
+@keyframes about-reveal {
+    from {
+        /* translate: (1000px,-50px); */
+        opacity: 0; 
+    }
+    to {
+        /* transform: translate(1250px,-50px); */
+        /* transform: translate(90vw,-6vh); */
+        position:absolute;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+}
+
+/* @keyframes color-change {
+    50%{color:black}
+    100%{color:aqua}
+} */
+
+@keyframes changeColor{
+    100%{
+        color:white;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        visibility: hidden;
+        translate: (0,100%);
+        opacity: 0; 
+    }
+    100% { 
+        color:white;
+        transform: translate(0,0);
+        visibility: visible;
+        opacity: 1;
+    }
+}

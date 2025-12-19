@@ -1,0 +1,16 @@
+    <!-- <ng-container *ngFor="let lett of nameArray">
+        <span align = "center left">{{generateRandomLowercase(lett)}}</span>
+    </ng-container> -->
+    
+    <h1>
+
+        <div class = "name">
+            <a routerLink="">
+            <ng-container *ngFor = "let letter of nameArray">
+            <span class = "eachLetter" align = "center left">{{letter}}</span>
+            </ng-container>
+            </a>
+        </div>
+    </h1>
+    
+   
